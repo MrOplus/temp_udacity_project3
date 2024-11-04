@@ -33,8 +33,10 @@ app.post('/api/submit',(req,res)=>{
         res.status(400).json({status:'error',message:'Invalid URL'});
     }
 });
-app.use('/', express.static(path.join(__dirname, 'dist')));
+app.use('/', express.static(path.join(__dirname, '../../dist')));
 const port = process.env.LISTEN_PORT || '9000';
 app.listen(port, function () {
     console.log(`Server is running on port: ${port}`);
 });
+
+module.exports = app;
