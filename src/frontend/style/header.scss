@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #333;
+        text-decoration: none;
+    }
+    .nav {
+        display: flex;
+        gap: 1rem;
+        a {
+            color: #333;
+            text-decoration: none;
+            &:hover {
+                color: #007bff;
+            }
+        }
+        ul { 
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+        }
+    }
+}

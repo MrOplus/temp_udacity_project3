@@ -1,0 +1,83 @@
+@use 'variables.scss' as variables;
+body {
+    background-color: variables.$primary-color;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.flex-1 {
+    flex: 1;
+}
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column ;
+        align-items: center !important;
+    }
+    .container .request-form {
+        width: 100%;
+    }
+    .result {
+        width: 100%;
+    }
+}
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    .request-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .form {
+            width: 100%;
+            display: flex;
+            gap:10px;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            label {
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+            input {
+                padding: 0.5rem;
+                font-size: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                height: 1.5em;
+            }
+            button {
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+                background-color: variables.$accent-color;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+    .card {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;        
+    }
+}
+
+footer {
+    background-color: variables.$accent-color;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: variables.$accent-color;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
